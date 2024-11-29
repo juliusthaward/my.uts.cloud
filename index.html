@@ -71,7 +71,7 @@
           </div>
           <div class="about-details" data-aos="fade-left" data-aos-duration="1000">
             <h2 class="section-title">TENTANG KAMI</h2>
-            <p class="text">
+            <p class="text-tentang-kami">
               PERGURUAN TINGGI TERBAIK DI BALI , Ingin Menjadi Profesional IT atau Entrepreneur? Wujudkan Mimpi mu Bersama dengan INSTIKI Selamat Datang di INSTIKI. INSTIKI (Institut Bisnis dan Teknologi Indonesia) adalah perguruan tinggi
               swasta Indonesia yang fokus pada bidang informatika, teknologi informasi, dan bisnis yang didirikan pada tanggal 18 April 2008 dan berada di bawah pengelolaan Yayasan Wahana Widya Wisesa Denpasar, Bali. Berdasarkan SK
               Mendiknas RI No. 70/D/O/2008.INSTIKI memiliki dua program studi yaitu Sistem Komputer dan Teknik Informatika.Instiki mengintegrasikan teknologi modern dengan pendekatan kewirausahaan untuk menyiapkan lulusannya menghadapi
@@ -221,7 +221,7 @@
       </section>
 
       <!--Gallery Section-->
-      <section class="gallery-section" id="gallery" data-aos="fade-down" data-aos-duration="900" data-aos-delay="500">
+      <section class="gallery-section" id="gallery" data-aos="fade-down" data-aos-duration="900" data-aos-delay="400">
         <h2 class="section-title">GALERI</h2>
         <div class="section-content">
           <ul class="gallery-list">
@@ -249,7 +249,7 @@
 
       <!--Contact Section-->
       <section class="contact-section" id="contact">
-        <h2 class="section-title m">KONTAK</h2>
+        <h2 class="section-title m" data-aos="flip-down" data-aos-duration="900">KONTAK</h2>
         <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
           <strong>Terima Kasih!</strong> Pesan anda sudah kami terima:p
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -352,10 +352,14 @@
       AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script>
+      gsap.registerPlugin(TextPlugin);
       gsap.from(".hero-image", { duration: 1, rotateY: 360, opacity: 0 });
       gsap.from(".nav-menu", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
       gsap.from(".nav-logo", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".hero-details", { duration: 1.5, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+      //gsap.to(".section-title m", { duration: 2, delay: 1.5, text: "Kontak" });
     </script>
   </body>
 </html>
